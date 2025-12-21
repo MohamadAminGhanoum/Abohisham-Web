@@ -1,0 +1,24 @@
+    body,html {
+        margin: 0;
+        padding: 0;
+        }
+
+    .page-name {
+        color: rgb(130, 191, 213);
+        text-align: left;
+        background: none;
+        opacity: 0.9;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+   }
+
+   .page-top {
+        background-color: rgb(33, 38, 60);
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+    .page-name:hover {
+        text-decoration: underline;
+        transition: 0.9s;
+    }  

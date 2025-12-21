@@ -8,7 +8,7 @@
 
 <!--for the page name-->
     <div class="page-top">
-<button class="page-name" onclick="index.html">Abohisham-Web</button>
+<a class="page-name" href="index.html">Abohisham-Web</a>
     </div>
 
 
@@ -16,29 +16,29 @@
 <h1>Coding Projects</h1>
 <style>
     h1 {
-        margin: 20px;
+        margin-left: 185px;
         font-family: 'verdana', sans-serif;
         word-spacing: normal;
     }
 </style>
 
-<details class="add-project">
-    <summary>
-<img src="plus-sign-icon-free-png.webp" alt="add" class="addbutton">
-    </summary>
+
 
 <div>
     <input type="text" placeholder="Project Name:">
     <textarea type="text" placeholder="Description of project:"></textarea>
     <textarea type="text" placeholder="The code:"></textarea>
 </div>
-</details>
+  
 
 <div class="Projects-overview">
+   <details class="add-project">
+    <summary><img src="plus-sign-icon-free-png.webp" alt="add" class="addbutton"></summary>
+      </details>
     <a href="Website">Abohisham-Web project</a>
+    <a href="blabla.html">Project 2</a>
+    <a href="blabla.html">project 3</a>
 </div>
-    
-
 
 <style>
     .Projects-overview {
@@ -49,29 +49,44 @@
         left:0px;
         background-color: rgb(33, 38, 60); 
         margin-top: 45px;
-    }
-    .Projects-overview a {
-        color:blue;
-        text-decoration: none;
-        
+        animation: moveleft 0.9s;
     }
 
-    .add-project {
-        margin: 20px;
+    @keyframes moveleft {
+        from {left: -155px;}
+        to {left: 0px;}
     }
+
+    .Projects-overview a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 14px;
+    }
+
+    .Projects-overview a:hover {
+        background-color: rgb(183, 191, 228);
+        }
+
+    .add-project {
+        margin: 10px;
+    }
+
     .addbutton {
         width: 50px;
         height: 50px;
         cursor: pointer;
         border-radius: 12px;
+        border: 2px solid rgb(173, 30, 30);
     }
+
     summary {
         list-style: none;
 }
 
     input, textarea {
         display: block;
-        margin: 10px 0px 10px 0px;
+        margin: 10px  10px ;
         width: 300px;
         font-family: 'verdana', sans-serif;
         margin-left: 200px;

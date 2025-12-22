@@ -7,13 +7,15 @@
 
     <body>
 
-<!--for the page name-->
-    <div class="page-top">
+<!--for the page navigation-bar-->
+    <div class="Navigation-bar">
 <a class="page-name" href="index.html">Abohisham-Web</a>
-    <div class="Time">Time Used <img src="clock.png" alt="clock"></div>
+    <div class="Time">Time Spent...<img src="clock.png" alt="clock"></div>
+    <div class="searchbar">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Go</button>
     </div>
-
-
+    </div>
 
 <!--buttons for the page-->
 <div class="buttons">
@@ -25,10 +27,39 @@
         Projects for coding <img src="coding.png" alt="Coding" class="img-buttons"></a>
     <a href="Hardwareprojects.html">
         Projects for hardware build <img src="hardware1.png" alt="hardware" class="img-buttons"></a>
+    <a href="Websites.html">
+        Websites <img src="webpage.png" alt="webpage"></a>
+    <a href="Calender.html">
+        Calendar <img src="calendar.png" alt="Calendar"></a>
 </div>
 
 
+
 <style>
+    .searchbar {
+        margin-right: 20px;
+        background-color: lightgray;
+        padding: 6px;
+        border: none;
+        font-size: 17px;
+        border-radius: 12px;
+    }
+    .searchbar input {
+        border: none;
+        font-size: 16px;
+        border-radius: 12px;
+        padding: 11px;
+    }
+    .searchbar button {
+        background-color: rgb(134, 142, 159);
+        padding: 11px 6px;
+        border-radius: 12px;
+    }
+    .searchbar button:hover {
+        background-color: rgb(100, 109, 125);
+        cursor: pointer;
+    }
+
     .Time {
         color: black;
         background-color: lightgray;
@@ -54,7 +85,7 @@
     .buttons a {
         background-color: lightgray;
         min-width: 140px;
-        min-height: auto;
+        min-height: 120px;
         border: none;
         color: black;
         align-items: center;
@@ -74,6 +105,7 @@
     .buttons a:hover {
         background-color:rgb(143, 148, 159);
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+        transform: translateY(-4px);
         }
 
     .buttons a img {

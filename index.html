@@ -3,6 +3,8 @@
 <head>
     <title>Abohisham-Web</title>
     <link rel="stylesheet" href="Navigation-bar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
     <body>
@@ -18,6 +20,17 @@
     </div>
 
 <!--buttons for the page-->
+<div class="content">
+
+    <div class="To-dolist">
+    <h3>To-dolist:</h3>
+    <input class="To-do-input" type="text" placeholder="Add...."></input>
+    <span class="addbutton">Add</span>
+        <ul>
+        <li>Finish Abohisham-web</li>
+        <li>Buy soldering iron</li>
+    </ul>
+    </div>
 <div class="buttons">
     <a href="Aboutme.html">
         About me <img src="me.png" alt="Me" class="img-buttons"></a>
@@ -31,11 +44,50 @@
         Websites <img src="webpage.png" alt="webpage"></a>
     <a href="Calender.html">
         Calendar <img src="calendar.png" alt="Calendar"></a>
+          <a href="Calender.html">
+        Calendar <img src="calendar.png" alt="Calendar"></a>
+              <a href="Calender.html">
+        Calendar <img src="calendar.png" alt="Calendar"></a>
+</div>
 </div>
 
 
 
+
+
+
+
+
+
 <style>
+    .To-dolist {
+        margin: 20px;
+        font-family: 'verdana', sans-serif;
+        background-color: lightgray;
+        padding: 10px;
+        border-radius: 12px;
+        width: 300px;
+    }
+    .To-do-input {
+        font-size: 16px;
+        border-radius: 6px;
+        border: none;
+        padding: 8px;
+        width: 180px;
+    }
+    .addbutton {
+        background-color: rgb(134, 142, 159);
+        color: white;
+        padding: 8px 12px;
+        margin-left: 6px;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+    .addbutton:hover {
+        background-color: rgb(100, 109, 125);
+
+    }
+
     .searchbar {
         margin-right: 20px;
         background-color: lightgray;
@@ -54,10 +106,12 @@
         background-color: rgb(134, 142, 159);
         padding: 11px 6px;
         border-radius: 12px;
+        transition-duration: 0.4s;
     }
     .searchbar button:hover {
         background-color: rgb(100, 109, 125);
         cursor: pointer;
+        transform: translateY(-4px);
     }
 
     .Time {
@@ -79,8 +133,12 @@
         height: 23px;
     }
 
-    .buttons {
+    .content {
         text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
     .buttons a {
         background-color: lightgray;
@@ -120,6 +178,7 @@
         transform: scale(0.9s);
         }
 </style>
+
 
     </body>
 

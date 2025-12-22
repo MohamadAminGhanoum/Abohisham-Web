@@ -18,17 +18,27 @@
     <input type="text" placeholder="Project Name:">
     <textarea type="text" placeholder="Description of project:"></textarea>
     <textarea type="text" placeholder="The code:"></textarea>
+    <button class="savebutton">Save</button>
 </div>
         </details>
 
 
 <div class="Projects-overview">
-    <a href="Website">Abohisham-Web project</a>
-    <a href="blabla.html">Project 2</a>
-    <a href="blabla.html">project 3</a>
+    <button class onclick="openProject(event, )">Abohisham-Web project</button>
+    <button onclick="openProject()">Project 2</button>
+    <button onclick="openProject()">project 3</button>
 </div>
 
 <style>
+    .savebutton {
+        width: 80px;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 12px;
+        border: lightgray solid 2px;
+        margin: 15px;
+    }
+
     h1 {
         margin-left: 220px;
         font-family: 'verdana', sans-serif;
@@ -53,15 +63,21 @@
         to {left: 0px;}
     }
 
-    .Projects-overview a {
+    .Projects-overview button {
         color: white;
         text-decoration: none;
+        background-color: rgb(51, 58, 91); 
+        border: none;
+        border-radius: 12px;
         display: block;
         padding: 14px;
         transition-duration: 0.4s;
+        width: 150px;
+        margin: 10px auto;
+        cursor: pointer;
     }
 
-    .Projects-overview a:hover {
+    .Projects-overview button:hover {
         background-color: rgb(183, 191, 228);
         border-radius: 12px;
         transform: translateY(-4px);
@@ -96,6 +112,11 @@
     }
     
 </style>
+
+<script>
+    funct 
+</script>
+
 
 </div>
 

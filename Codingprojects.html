@@ -16,25 +16,25 @@
 <h1>Coding Projects</h1>
 <style>
     h1 {
-        margin-left: 185px;
+        margin-left: 220px;
         font-family: 'verdana', sans-serif;
         word-spacing: normal;
     }
 </style>
 
 
-
+   <details class="add-project">
+    <summary><img src="plus-sign-icon-free-png.webp" alt="add" class="addbutton"></summary>
 <div>
     <input type="text" placeholder="Project Name:">
     <textarea type="text" placeholder="Description of project:"></textarea>
     <textarea type="text" placeholder="The code:"></textarea>
 </div>
-  
+        </details>
+
 
 <div class="Projects-overview">
-   <details class="add-project">
-    <summary><img src="plus-sign-icon-free-png.webp" alt="add" class="addbutton"></summary>
-      </details>
+
     <a href="Website">Abohisham-Web project</a>
     <a href="blabla.html">Project 2</a>
     <a href="blabla.html">project 3</a>
@@ -42,14 +42,16 @@
 
 <style>
     .Projects-overview {
-        height:100%;
-        width:150px;
-        position: fixed;
+        height: 79%;
+        width: 180px;
+        margin-left: 18px;
+        position:absolute;
         top:0px;
         left:0px;
         background-color: rgb(33, 38, 60); 
-        margin-top: 45px;
+        margin-top: 71px;
         animation: moveleft 0.9s;
+        border-radius: 12px;
     }
 
     @keyframes moveleft {
@@ -66,10 +68,11 @@
 
     .Projects-overview a:hover {
         background-color: rgb(183, 191, 228);
+        border-radius: 12px;
         }
 
     .add-project {
-        margin: 10px;
+        margin: 10px 225px;
     }
 
     .addbutton {
@@ -86,10 +89,9 @@
 
     input, textarea {
         display: block;
-        margin: 10px  10px ;
+        margin: 15px;
         width: 300px;
         font-family: 'verdana', sans-serif;
-        margin-left: 200px;
         border: 12px solid lightgray;
         border-radius: 12px;
         padding: 10px;
@@ -98,23 +100,7 @@
     
 </style>
 
-<!--Buttons to add the coding projects-->
-<div class="buttons">
-    <a></a>
 
-
-<style>
-    .buttons a {
-        background-color: lightgray;
-}   
-    .buttons .addbutton {
-        width: 100px;
-        height: 100px;
-        margin: 20px;
-        cursor: pointer;
-}
-        
-</style>
 </div>
 
 

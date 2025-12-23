@@ -21,6 +21,23 @@
 
 <!--buttons for the page-->
 <div class="content">
+    <h1>I build magic</h1>
+
+<style>
+    h1 {
+        width: 100%;
+        text-align: center;
+        font-family: 'verdana', sans-serif;
+        color: black;
+        text-transform: uppercase;
+        -webkit-text-stroke: 2px white;
+        font-weight: 3000;
+        font-style: italic;
+        font-family: 'verdana', sans-serif;
+        margin-bottom: 30px;
+    }
+</style>
+
     <div class="To-dolist">
     <h3>To-dolist:</h3>
     <input class="To-do-input" type="text" placeholder="Add...."></input>
@@ -188,17 +205,33 @@
         padding: 0;
         font-family: 'verdana', sans-serif;
         background-size: cover;
-        background-attachment: fixed;
-        background-image: url(pattern-8798134_1920.png);
-        content: "";
         opacity: 0.9;
     }
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(pattern-8798134_1920.png);
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(8px);
+    z-index: -1;
+}
+
 
     @media  (max-width: 800px) {
         .content {
             flex-direction: row;
             align-items: center;
         }
+        .buttons a {
+            padding: 5px 0px;
+            font-size: small;
+            
+        }
+
         .Time {
             padding: 5px 10px;
         }

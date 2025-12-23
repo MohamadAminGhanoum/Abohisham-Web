@@ -25,8 +25,20 @@
         align-items: center;
         justify-content: space-between;
         height: 55px;
+        flex-wrap: wrap;
     }
     .page-name:hover {
         box-shadow: 0 7px 16px 0 rgba(186, 112, 112, 0.6);
         transform: translateY(-4px);
     }  
+
+        @media  (max-width: 800px) {
+        .Navigation-bar {
+            flex-direction: row;
+            align-items: flex-start;
+            height: auto;
+        }
+        .page-name {
+            size: 5px ;
+        }
+    }

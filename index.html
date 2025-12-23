@@ -21,7 +21,6 @@
 
 <!--buttons for the page-->
 <div class="content">
-
     <div class="To-dolist">
     <h3>To-dolist:</h3>
     <input class="To-do-input" type="text" placeholder="Add...."></input>
@@ -31,6 +30,7 @@
         <li>Buy soldering iron</li>
     </ul>
     </div>
+
 <div class="buttons">
     <a href="Aboutme.html">
         About me <img src="me.png" alt="Me" class="img-buttons"></a>
@@ -50,10 +50,6 @@
         Calendar <img src="calendar.png" alt="Calendar"></a>
 </div>
 </div>
-
-
-
-
 
 
 
@@ -140,6 +136,15 @@
         justify-content: flex-start;
         align-items: flex-start;
     }
+.buttons {
+    margin: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    }
+
     .buttons a {
         background-color: lightgray;
         min-width: 140px;
@@ -179,10 +184,21 @@
         }
 
     body {
-        background-color: rgb(108, 108, 108);
         margin: 0;
         padding: 0;
         font-family: 'verdana', sans-serif;
+        background-size: cover;
+        background-attachment: fixed;
+        background-image: url(pattern-8798134_1920.png);
+        content: "";
+        opacity: 0.9;
+    }
+
+    @media  (max-width: 800px) {
+        .content {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 </style>
 

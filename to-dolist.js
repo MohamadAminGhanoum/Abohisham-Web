@@ -1,7 +1,7 @@
 //credit to https://www.youtube.com/watch?v=oMt3U1zfoe0
 // I have some difficulty in Java script, so i had to follow a guide.
 
-const todoValue = document.getElementById("To-doinput");
+const todoValue = document.getElementById("Addinginput");
 const liststyle = document.getElementById("list-style");
 const appupdateClick = document.getElementById("addbutton");
 let todoData = JSON.parse(localStorage.getItem("todoData")) || [];
@@ -25,7 +25,7 @@ todoValue.addEventListener("keypress", function(e) {
     }
 });
 
-function CreateTodo() {
+function CreateThing() {
     if (todoValue.value === "") {
         alert("Write smth");
         todoValue.focus();

@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+    <title>Abohisham-Web</title>
+    <link rel="stylesheet" href="Navigation-bar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <div class="Navigation-bar">
+<a class="page-name" href="index.html">Abohisham-Web</a>
+    </div>
+
+<h1>Best Websites</h1>
+
+<div class="Website-adding">
+    <div class="websiteinput">
+        <input id="Addinginput" class="Addwebsite" placeholder="Add..." type="text"></input>
+        <span class="addbutton" id="addbutton" onclick="CreateThing()">Add</span>
+        </div>
+                <ul class="list-style" id="list-style"></ul>
+
+</div>
+
+    <style>
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Website-adding {
+        width: 100%;
+        box-sizing: border-box;
+        background-color: lightgray;
+        opacity: 0.9;
+        padding: 10px 20%;
+        margin: 0;
+        }
+
+    .websiteinput {
+        align-items: center;
+        display: flex;
+        }
+
+    .Addwebsite {
+        padding: 8px;
+        height: 20px;
+        font-size: 17px;
+        width: 90%;
+        border-radius: 12px;
+        border: none;
+        }
+
+    .addbutton {
+        background-color: rgb(134, 142, 159);
+        color: white;
+        padding: 8px 12px;
+        height: 20px;
+        margin-left: 6px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition-duration: 0.2s;
+    }
+
+    .addbutton:hover {
+        background-color: rgb(100, 109, 125);
+        transform: scale(1.05);
+    }
+
+    .addbutton:active {
+        transform: scale(0.9s);
+
+}
+    #list-style {
+        padding: 0;        
+        margin: 20px 0; 
+        width: 100%;
+}
+
+    li {
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        background: rgb(148, 145, 142);
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px 20px;
+        transition: transform(0.2s);
+    }
+
+    li:hover {
+        translate: transformX(5px);
+        background: rgb(100, 109, 125);
+
+    }
+
+    .delete {
+        width: 25px;
+        height: 25px;
+        padding: 3px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'verdana', sans-serif;
+        opacity: 0.9;
+        background-color: rgb(39, 84, 133);
+        background-image: radial-gradient(rgba(208, 218, 192, 0.1) 15%, transparent 16%);
+        background-size: 10px 10px;
+    }
+
+    </style>
+
+<script type="text/javascript" src="Addwebsite.js"></script>
+
+
+    </body>

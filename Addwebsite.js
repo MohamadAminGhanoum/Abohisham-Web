@@ -3,6 +3,15 @@ const liststyle = document.getElementById("list-style");
 const appupdateClick = document.getElementById("addbutton");
 let websiteData = JSON.parse(localStorage.getItem("websiteData")) || [];
 
+if (!websiteData || websiteData.length === 0) {
+    websiteData = [
+        { item: "https://app.slack.com/client", status: false },
+        { item: "https://flavortown.hackclub.com/explore", status: false },
+        { item: "https://blueprint.hackclub.com/home", status: false }
+];
+    localStorage.setItem("websiteData", JSON.stringify(websiteData));
+}
+
 ReadwebsiteItems();
 
 function ReadwebsiteItems() {
@@ -10,7 +19,7 @@ function ReadwebsiteItems() {
     websiteData.forEach(element => {
         let li = document.createElement("li");
         let style = element.status ? "style='text-decoration: line-through'" : "";
-        const websiteItems = `<div ${style} ondblclick="Finishwebsite(this)">${element.item}</div><img class="delete to-do" src="delete.png" onclick="Deletewebsite(this)">`;
+        const websiteItems = `<div>${element.item}</div><img class="delete to-do" src="delete.png" onclick="Deletewebsite(this)">`;
         li.innerHTML = websiteItems;
         liststyle.appendChild(li);
     });
@@ -37,16 +46,8 @@ function CreateThing() {
     websiteValue.value = "";
 }
 
-function Finishwebsite(e) {
-    let itemText = e.innerText;
-    websiteData.forEach((element) => {
-        if (element.item === itemText) {
-            element.status = !element.status;
-        }
-    });
     localStorage.setItem("websiteData", JSON.stringify(websiteData));
     ReadwebsiteItems();
-}
 
 function Deletewebsite(e) {
     let li = e.parentElement;

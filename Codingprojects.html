@@ -15,15 +15,16 @@
    <details class="add-project">
     <summary><img src="plus-sign-icon-free-png.webp" alt="add" class="addbutton"></summary>
 <div>
-    <input type="text" placeholder="Project Name:">
+    <input type="text" id="saveInput" placeholder="Project Name:">
     <textarea style="width: 70%;" type="text" placeholder="Description of project:"></textarea>
-    <textarea style="width: 100%;" type="text" placeholder="The code:"></textarea>
-    <button class="savebutton">Save</button>
+    <textarea style="width: 100%;" id="codeInput" type="text" placeholder="The code:"></textarea>
+    <button class="savebutton" onclick ="saveItem()">Save</button>
+   
 </div>
         </details>
 
 
-<div class="Projects-overview">
+<div class="Projects-overview" id="projectLists">
     <button class onclick="openProject(event, )">Abohisham-Web project</button>
     <button onclick="openProject()">Project 2</button>
     <button onclick="openProject()">project 3</button>
@@ -121,12 +122,8 @@
     }
 </style>
 
-<script>
-    funct 
-</script>
 
 
-</div>
-
+<script src="saveItems.js"></script>
 </body>
 </html>

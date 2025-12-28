@@ -17,11 +17,17 @@
         transition-duration: 0.4s;
         background-color: rgb(70, 125, 98);
         border-radius: 20px;
-        padding: 5px;
+        padding: 6px;
    }
 
    .Navigation-bar {
-        background-color: rgb(33, 38, 60);
+        background-color: rgba(36, 40, 50, 1); /*thanks to uiverse.io for inspiration to this bg */
+        background-image: linear-gradient(
+    139deg,
+    rgba(36, 40, 50, 1) 0%,
+    rgba(36, 40, 50, 1) 0%,
+    rgba(37, 28, 40, 1) 100%
+  );
         padding: 5px;
         margin-bottom: 5px;
         display: flex;

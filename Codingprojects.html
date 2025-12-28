@@ -11,7 +11,7 @@
 <a class="page-name" href="index.html">Abohisham-Web</a>
     </div>
 
-<h1>Coding Projects</h1>
+<h1>Coding Projects(Beta(under construction))</h1>
    <details class="add-project">
     <summary><img src="plus-sign-icon-free-png.webp" alt="add" class="addbutton"></summary>
 <div>
@@ -29,6 +29,7 @@
     <button onclick="openProject()">Project 2</button>
     <button onclick="openProject()">project 3</button>
 </div>
+<pre id="projectsSide"></pre>
 
 <style>
     .savebutton {
@@ -73,7 +74,7 @@
         display: block;
         padding: 14px;
         transition-duration: 0.4s;
-        width: 150px;
+        width: 130px;
         margin: 10px auto;
         cursor: pointer;
     }
@@ -120,6 +121,25 @@
         background-image: radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 16%);
         background-size: 10px 10px;
     }
+
+    .removeProject {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .deleteproject {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    #projectsSide {
+        background-color: lightgray;
+        position: absolute;
+        margin-left: 240px;
+    }
+
 </style>
 
 

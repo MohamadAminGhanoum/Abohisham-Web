@@ -80,7 +80,134 @@ window.onload = function() {
 <div class="Projects-overview" id="projectLists"></div>
 <pre id="projectsSide"></pre>
 
-<style>`;
+<style>
+    .savebutton {
+        width: 80px;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 12px;
+        border: lightgray solid 2px;
+        margin: 15px;
+    }
+
+    h1 {
+        margin-left: 220px;
+        font-family: 'verdana', sans-serif;
+        word-spacing: normal;
+    }
+
+    .Projects-overview {
+        height: 79%;
+        width: 180px;
+        margin-left: 29px;
+        position:absolute;
+        top:0px;
+        left:0px;
+        background-color: rgb(33, 38, 60); 
+        margin-top: 91px;
+        animation: moveleft 0.9s;
+        border-radius: 12px;
+    }
+
+    @keyframes moveleft {
+        from {left: -155px;}
+        to {left: 0px;}
+    }
+
+    .Projects-overview button {
+        color: white;
+        text-decoration: none;
+        background-color: rgb(51, 58, 91); 
+        border: none;
+        border-radius: 12px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 14px;
+        text-align: left;
+        transition-duration: 0.4s;
+        width: 175px;
+        margin: 5px auto;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+
+    .Projects-overview button:hover {
+        background-color: rgb(183, 191, 228);
+        border-radius: 12px;
+        transform: translateY(-4px);
+
+        }
+
+    .add-project {
+        margin: 10px 225px;
+    }
+
+    .addbutton {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        border-radius: 12px;
+        border: 2px solid rgb(173, 30, 30);
+    }
+
+    summary {
+        list-style: none;
+}
+
+    input, textarea {
+        display: block;
+        margin: 15px;
+        width: 300px;
+        font-family: 'verdana', sans-serif;
+        border: 12px solid lightgray;
+        border-radius: 12px;
+        padding: 10px;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'verdana', sans-serif;
+        opacity: 0.9;
+        background-color: rgb(19, 75, 79);
+        background-image: radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 16%);
+        background-size: 10px 10px;
+    }
+
+    .removeProject {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 170px;
+    }
+
+    .deleteproject {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        margin: 0;
+        background-color: rgb(66, 81, 155); 
+        padding: 8px 8px;
+        border-radius: 8px;
+    }
+    .deleteproject:hover {
+        transform: scale(1.05);
+    }
+
+    #projectsSide {
+        background-color: lightgray;
+        position: absolute;
+        margin-left: 240px;
+    }
+
+</style>
+
+
+
+<script src="saveItems.js"></script>
+</body>
+</html>`;
 
     const wasDeleted = localStorage.getItem("welcomeDeleted");
 
@@ -102,7 +229,6 @@ function addProjectToScreen(projectName, projectCode) {
 
     const nameButton = document.createElement("button");
     nameButton.textContent = projectName;
-    // This allows the delete button to stay inside pinned to the right
     nameButton.style.position = "relative"; 
     nameButton.style.paddingRight = "30px"; 
 

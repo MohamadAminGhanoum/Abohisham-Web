@@ -29,7 +29,7 @@ deletebutton.onclick = function() {
     }
 };
 getrid.appendChild(box);
-getrid.appendChild(deletebutton);
+box.appendChild(deletebutton);
 container.appendChild(getrid)
     }
 

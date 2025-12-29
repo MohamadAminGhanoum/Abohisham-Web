@@ -24,12 +24,7 @@
 </div>
         </details>
 
-
-<div class="Projects-overview" id="projectLists">
-    <button class onclick="openProject(event, )">Abohisham-Web project</button>
-    <button onclick="openProject()">Project 2</button>
-    <button onclick="openProject()">project 3</button>
-</div>
+<div class="Projects-overview" id="projectLists"></div>
 <pre id="projectsSide"></pre>
 
 <style>
@@ -51,7 +46,7 @@
     .Projects-overview {
         height: 79%;
         width: 180px;
-        margin-left: 18px;
+        margin-left: 29px;
         position:absolute;
         top:0px;
         left:0px;
@@ -72,11 +67,15 @@
         background-color: rgb(51, 58, 91); 
         border: none;
         border-radius: 12px;
-        display: block;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
         padding: 14px;
+        text-align: left;
         transition-duration: 0.4s;
-        width: 130px;
-        margin: 10px auto;
+        width: 175px;
+        margin: 5px auto;
+        margin-left: 5px;
         cursor: pointer;
     }
 
@@ -126,13 +125,21 @@
     .removeProject {
         align-items: center;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        width: 170px;
     }
 
     .deleteproject {
         width: 20px;
         height: 20px;
         cursor: pointer;
+        margin: 0;
+        background-color: rgb(66, 81, 155); 
+        padding: 8px 8px;
+        border-radius: 8px;
+    }
+    .deleteproject:hover {
+        transform: scale(1.05);
     }
 
     #projectsSide {

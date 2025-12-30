@@ -239,8 +239,7 @@ function addProjectToScreen(projectName, projectCode) {
     const deleteIcon = document.createElement("img");
     deleteIcon.src = "delete.png";
     deleteIcon.className = "deleteproject";
-    // Force it to stay visible inside the button
-    deleteIcon.style.position = "absolute";
+deleteIcon.style.position = "absolute";
     deleteIcon.style.right = "5px";
     deleteIcon.style.top = "50%";
     deleteIcon.style.transform = "translateY(-50%)";

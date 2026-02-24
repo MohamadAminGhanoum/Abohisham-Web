@@ -13,12 +13,23 @@
 <!--for the page navigation-bar-->
     <div class="Navigation-bar">
 <a class="page-name" href="index.html">Abohisham-Web</a>
-    <div class="Time">Time Spent(coming soon)...<img src="clock.png" alt="clock"></div>
-    <div class="searchbar">
+
+<div class="time">
+    <p class="Time nr" id="time nr">25:00</p>
+        <div class="Time-buttons">
+            <button class="but-ton" id="Begin">Begin</button>
+            <button class="but-ton" id="Stop">Stop</button>
+            <button class="but-ton" id="Reset">Reset</button>
+        </div>
+        <script type="text/javascript" src="Timer.js"></script>
+        </div>
+            <div class="searchbar">
         <input type="text" placeholder="Search(Coming soon)">
         <button type="submit">Go</button>
     </div>
-    </div>
+
+        </div>
+
 
 <!--buttons for the page-->
 <div class="content">
@@ -156,48 +167,85 @@
     }
 
     .searchbar {
-        margin-right: 20px;
-        background-color: rgb(70, 125, 98);
+        padding-right: 20px;
+        background-color: rgba(49, 60, 69, 0.9);
         padding: 6px;
         border: none;
+        display: flex;
         font-size: 17px;
-        border-radius: 20px;
+        border-radius: 14px;
+        max-width: 220px;
+        justify-content: flex-end;
+        justify-self: end;
     }
     .searchbar input {
         border: none;
         font-size: 16px;
-        border-radius: 19px;
+        border-radius: 16px 0 0 16px;
         padding: 11px;
     }
     .searchbar button {
         background-color: rgb(134, 142, 159);
         padding: 11px 6px;
-        border-radius: 12px;
+        border-radius: 0 16px 16px 0;
         transition-duration: 0.4s;
+        border: none;
     }
     .searchbar button:hover {
         background-color: rgb(100, 109, 125);
         cursor: pointer;
-        transform: translateY(-4px);
+        transform: translateX(-4px);
         
     }
 
     .Time {
-        color: black;
-        background-color: rgb(70, 125, 98);
+        color: rgb(100, 157, 213);
+        background-color: rgba(49, 60, 69, 0.9);
         align-items: center;
         display: flex;
-        border-radius: 20px;
+        border-radius: 16px;
         padding: 12px 30px;
         font-family: verdana, sans-serif;
         font-size: 16px;
         width: fit-content;
-        gap: 12px;
+        gap: 4px;
+        margin: 0;
     }
 
-    .Time img {
-        width: 23px;
-        height: 23px;
+  .time {
+        display: flex;
+                flex-direction: row;
+
+        align-items: center;
+        gap: 1px;
+        font-family: 'verdana', sans-serif;
+        color: black;
+    }
+
+    .but-ton {
+        color: white;
+        padding: 6px 12px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        border: none;
+    }
+
+    .but-ton:hover {
+        background-color: rgb(100, 109, 125);
+        transform: translateY(-4px);
+    }
+
+    #Begin {
+        background-color: rgb(70, 125, 98);
+    }
+
+    #Stop {
+        background-color: rgb(125, 70, 70);
+    }
+
+    #Reset {
+        background-color: rgb(70, 70, 125);
     }
 
     .content {

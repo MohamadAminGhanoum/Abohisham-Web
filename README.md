@@ -7,7 +7,8 @@ Note: I will in the future update this to make it suit for everyone, instead of 
 But as a start, it is a more personal website with notes and projects.
 
 Here is a picture of the front page:
-![Screenshot_30-12-2025_145951_](https://github.com/user-attachments/assets/1544ae6f-6144-4c9e-9c9a-e78457a08316)
+<img width="1273" height="597" alt="Screenshot 2026-02-24 at 20 29 16" src="https://github.com/user-attachments/assets/b16ecb46-daed-42a1-abab-531008673f2d" />
+
 
 This is the picture of the website page:
 ![Screenshot_30-12-2025_1502_](https://github.com/user-attachments/assets/5a581f75-ec1a-42f0-b2be-f704b8f4e451)

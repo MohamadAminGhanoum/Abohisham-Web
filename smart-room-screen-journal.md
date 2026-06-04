@@ -21,11 +21,13 @@ This means that i will make an integrated dev-board into this project.
 _Time spent: 0.5h_  
 
 I began with the most important, the input circuit. I used the similar input setup, to what i used when i did the custom-devboard.
+
 ![Screenshot 2026-01-23 at 23.31.49](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODk0OTAsInB1ciI6ImJsb2JfaWQifX0=--560f4f888e6caf77cc84ee178d3e982e8247ada9/Screenshot%202026-01-23%20at%2023.31.49.png)
 
 I was considering to use the rp2040 as the microcontroller, but i found out that i cannot use it for connecting to wifi. Therfore i chose the ESP32-s3-wroom as the microcontroller since it can be connected to the internet, but also i found multiple ways to use it in my schematic.
 
 I found a good battery charging chip, that can charge a battery with max 500 mA. This is good for safety.I liked this chip (MAX1898) because it can give me the battery percentage which i can display on the e-ink display.
+
 ![Screenshot 2026-01-23 at 23.30.38](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODk0OTEsInB1ciI6ImJsb2JfaWQifX0=--b414bff079b31e8c47ad801b1b7839c3cfe04df5/Screenshot%202026-01-23%20at%2023.30.38.png)
 
   
@@ -37,6 +39,7 @@ _Time spent: 1.3h_
 I had to do a lot of searching and looked in many datasheets to configure the input power.
 
 I added the adp124 chip, which is an LDO mosfet that outputs fixed 3.3v. This i will use to power on the esp-32. 
+
 ![Screenshot 2026-01-24 at 14.05.35](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODk5NTQsInB1ciI6ImJsb2JfaWQifX0=--a4ca6280a9419464a4259b64587973f324113cb0/Screenshot%202026-01-24%20at%2014.05.35.png)
 
 I also thought about adding a sliding switch, so instead of the whole board turning on when the power is plugged in, the board will only turn on when the EN pin is pulled high. I connected one pin of the sliding switch through a 10kohm resistor to vcc, and the other pin to gnd. So this can now be switched on and off.
@@ -64,6 +67,7 @@ Im also considering using a 803040 LiPo battery, which has a battery protection
 Since i could not fulfill my idea of making a battery percentage view on the e-ink display, i chose to add an LED to approximate how much until the battery is fully charged.
 
 And the final schematic for the battery charging circuit looks like this:
+
 ![Screenshot 2026-01-24 at 16.34.39](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTAwMzMsInB1ciI6ImJsb2JfaWQifX0=--6bfa2f88c47162ed01e595b95979d51757616d22/Screenshot%202026-01-24%20at%2016.34.39.png)
 
   
@@ -102,6 +106,7 @@ I finally did add all the footprints for the components. It was somehow tricky t
 _Time spent: 2.8h_  
 
 I finally routed the pcb, when i started, i had too much spacing between the components, it looked kinda empty when i went to the 3d view. Therefore i had to do some changes in the routing and move the componentes closer together to prevent the large spacing in between. 
+
 ![Screenshot 2026-01-25 at 01.16.12](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NDcsInB1ciI6ImJsb2JfaWQifX0=--1b6b0004cadd14d230bde22626d27f252133ef36/Screenshot%202026-01-25%20at%2001.16.12.png)
 
 After i thought i finished schematics, the real shock came when i ran the drc scan. 
@@ -114,6 +119,7 @@ I honestly dont know what to say about it, i will try to take a look at, but i c
 I have a feeling that this will be a pain, but i will try to research to see if i can somehow fix this in an easier way, since most errors are caused by the footprints themselves. I fixed some of my own errors such as not connecting the connections and etc.
 
 The 3d model looks like this right now:
+
 ![Screenshot 2026-01-25 at 01.20.22](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NDksInB1ciI6ImJsb2JfaWQifX0=--e91a59fbd7235dc82c795e17a71e74b4fb0f2f73/Screenshot%202026-01-25%20at%2001.20.22.png)
   
 
@@ -179,12 +185,13 @@ I wanted to add the 4.2 inch display that i found from aliexpress as a CAD into 
 
 
 When doing this, i had to measure the sides of the PCB from kicad and then apply this to the dimensions in fusion 360
-![Screenshot 2026-02-05 at 20.34.03](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTg4NTUsInB1ciI6ImJsb2JfaWQifX0=--ed679db5f849480349a708e418ffee8b7bbfd02a/Screenshot%202026-02-05%20at%2020.34.03.png)
 
+![Screenshot 2026-02-05 at 20.34.03](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTg4NTUsInB1ciI6ImJsb2JfaWQifX0=--ed679db5f849480349a708e418ffee8b7bbfd02a/Screenshot%202026-02-05%20at%2020.34.03.png)
 ![Screenshot 2026-02-05 at 20.35.39](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTg4NTYsInB1ciI6ImJsb2JfaWQifX0=--35a68d320a836302249f9bf53c3396b289470e28/Screenshot%202026-02-05%20at%2020.35.39.png)
 ![Screenshot 2026-02-05 at 20.37.48](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTg4NTcsInB1ciI6ImJsb2JfaWQifX0=--d5ae9296635a8881e1526f7bd84a325305682401/Screenshot%202026-02-05%20at%2020.37.48.png)
 
 I then merged the files together to see how it would look like when it is closed with the screen, although it is not the same screen that i will get from aliexpress:
+
 ![Screenshot 2026-02-05 at 20.56.48](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTg4NTksInB1ciI6ImJsb2JfaWQifX0=--0af2c11f57c13b85a976273837e34666bf34ec54/Screenshot%202026-02-05%20at%2020.56.48.png)
 ![Screenshot 2026-02-05 at 21.09.17](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTg4NTgsInB1ciI6ImJsb2JfaWQifX0=--b56a942c991cc9d51fdc895d0271b19780980886/Screenshot%202026-02-05%20at%2021.09.17.png)
 

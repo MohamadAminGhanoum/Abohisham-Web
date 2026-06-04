@@ -116,11 +116,155 @@ window.onload = function() {
 </style>
 `;
 
+const project3Name = "Smart Screen"
+const number3Project = `
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<div id="number3Projects">Coming soon...</div>
+<script>
+    fetch('smart-room-screen-journal.md')
+    .then(response => response.text())
+    .then(text => {
+        document.getElementById('number3Projects').innerHTML = marked.parse(text);
+    })
+    .catch(error => {
+        console.error('smth is wrong with md file:', error);
+        document.getElementById('number3Projects').innerHTML = 'Error detail: ' + error.message + '; issue with loading the contents.';
+    });
+
+</script>
+<style>
+    #number3Projects {
+        margin-right: 20px;
+        border-radius: 12px;
+        width: 90%;
+        padding: 20px 10px;
+        font-family: 'verdana', sans-serif;
+        color: white;
+    }
+
+    #number3Projects img {
+        max-width: 250px;
+        height: auto;
+        border-radius: 8px;
+    }
+</style>
+`;
+
+const project4Name = "Hackpad build"
+const number4Project = `
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<div id="number4Projects">Coming soon...</div>
+<script>
+    fetch('macropad-hackpad-journal.md')
+    .then(response => response.text())
+    .then(text => {
+        document.getElementById('number4Projects').innerHTML = marked.parse(text);
+    })
+    .catch(error => {
+        console.error('smth is wrong with md file:', error);
+        document.getElementById('number4Projects').innerHTML = 'Error detail: ' + error.message + '; issue with loading the contents.';
+    });
+
+</script>
+<style>
+    #number4Projects {
+        margin-right: 20px;
+        border-radius: 12px;
+        width: 90%;
+        padding: 20px 10px;
+        font-family: 'verdana', sans-serif;
+        color: white;
+    }
+
+    #number4Projects img {
+        max-width: 250px;
+        height: auto;
+        border-radius: 8px;
+    }
+</style>
+`;
+
+const project5Name = "Smart-home"
+const number5Project = `
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<div id="number5Projects">Coming soon...</div>
+<script>
+    fetch('mini-smarthome-journal.md')
+    .then(response => response.text())
+    .then(text => {
+        document.getElementById('number5Projects').innerHTML = marked.parse(text);
+    })
+    .catch(error => {
+        console.error('smth is wrong with md file:', error);
+        document.getElementById('number5Projects').innerHTML = 'Error detail: ' + error.message + '; issue with loading the contents.';
+    });
+
+</script>
+<style>
+    #number5Projects {
+        margin-right: 20px;
+        border-radius: 12px;
+        width: 90%;
+        padding: 20px 10px;
+        font-family: 'verdana', sans-serif;
+        color: white;
+    }
+
+    #number5Projects img {
+        max-width: 250px;
+        height: auto;
+        border-radius: 8px;
+    }
+</style>
+`;
+
+const project6Name = "Variable PSU"
+const number6Project = `
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<div id="number6Projects">Coming soon...</div>
+<script>
+    fetch('variable-power-supply-journal.md')
+    .then(response => response.text())
+    .then(text => {
+        document.getElementById('number6Projects').innerHTML = marked.parse(text);
+    })
+    .catch(error => {
+        console.error('smth is wrong with md file:', error);
+        document.getElementById('number6Projects').innerHTML = 'Error detail: ' + error.message + '; issue with loading the contents.';
+    });
+
+</script>
+<style>
+    #number6Projects {
+        margin-right: 20px;
+        border-radius: 12px;
+        width: 90%;
+        padding: 20px 10px;
+        font-family: 'verdana', sans-serif;
+        color: white;
+    }
+
+    #number6Projects img {
+        max-width: 250px;
+        height: auto;
+        border-radius: 8px;
+    }
+</style>
+`;
+
     const wasHardwareDeleted = localStorage.getItem("welcomeHardwareDeleted");
 
     if (wasHardwareDeleted !="yes") {
         addProjectToScreen(devboardName, devboardProject);
+        addProjectToScreen(project3Name, number3Project);
         addProjectToScreen(welcomeHardwareName, welcomeHardwareProject);
+        addProjectToScreen(project4Name, number4Project);
+        addProjectToScreen(project5Name, number5Project);
+        addProjectToScreen(project6Name, number6Project);
     }
     const savedProjects = JSON.parse(localStorage.getItem("hardwareitems")) || [];
 

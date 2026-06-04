@@ -33,7 +33,7 @@
 
 <!--buttons for the page-->
 <div class="content">
-    <h1>Tomorrow is today</h1>
+    <h1 class="TimeNRdisplay" id="Time">3:41 pm</h1>
     <p>
         <b>Welcom to Abohisham-web!!</b><br> I love working with beautiful ui and coding in general
         i'm a beginner-intermediate in coding, and is using this website to practice my skills and learn more about coding.
@@ -105,6 +105,15 @@
         bottom: 0;
         width: 100%;
         margin-top: 20px;
+    }
+
+    .TimeNRdisplay {
+        padding: 13px 30px;
+        border-radius: 12px;
+        background-color: rgb(55, 72, 66, 0.4);
+        display: flex;
+        align-items: center;
+        width: fit-content;
     }
 
     .To-dolist {
@@ -224,8 +233,8 @@
 
     .but-ton {
         color: white;
-        padding: 6px 12px;
-        border-radius: 12px;
+        padding: 9px 12px;
+        border-radius: 12px 0px 12px 12px;
         cursor: pointer;
         transition-duration: 0.4s;
         border: none;
@@ -323,6 +332,8 @@
         opacity: 0.9;
         background-size: 10px 10px;
         background: linear-gradient(to bottom, #14144f, #335883 70%, #090a0f);
+        overflow-x: hidden;
+        padding-top: 60px;
     }
 
     @media  (max-width: 800px) {
@@ -353,6 +364,16 @@
 
 <script type="text/javascript" src="to-dolist.js"></script>
 
+
+<script>
+        function updateTime() {
+        var TimeRN = new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+        var TimeNR = document.querySelector("#Time");
+        TimeNR.innerHTML = TimeRN;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
     </body>
 
 </html>

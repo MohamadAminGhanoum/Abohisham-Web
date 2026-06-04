@@ -13,7 +13,7 @@
     </div>
 
 <h1>Hardwareprojects</h1>
-<p>There will be some more changes in next shipping, where i will try to integrate uploading img if possible</p>
+<p>There will be some more changes in next shipping, where i will try to integrate and implement uploading .md files if possible, what prevented me was cuz i dont have a database and server</p>
    <details class="add-project">
     <summary><img src="plus-sign-icon-free-png.webp" alt="add" class="addbutton"></summary>
 <div>
@@ -41,6 +41,7 @@
         margin-left: 230px;
         font-family: 'verdana', sans-serif;
         word-spacing: normal;
+        margin-right: 40px;
     }
 
     .Projects-overview {
@@ -50,10 +51,13 @@
         position:absolute;
         top:0px;
         left:0px;
-        background-color: rgb(33, 38, 60); 
+        background-color: rgb(33, 38, 60, 0.84); 
         margin-top: 91px;
         animation: moveleft 0.9s;
         border-radius: 12px;
+            -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
     }
 
     @keyframes moveleft {
@@ -118,7 +122,7 @@
         padding: 0;
         font-family: 'verdana', sans-serif;
         opacity: 0.9;
-        background-color: rgb(6, 101, 114);
+        background-color: rgb(83, 101, 103);
         background-image: radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 16%);
         background-size: 10px 10px;
         padding-top: 60px;
@@ -146,12 +150,15 @@
     }
 
     #projectsSidebar {
-        background-color: rgb(116, 107, 107);
+        background-color: rgba(72, 74, 75, 0.8);
         position: absolute;
         margin-left: 240px;
         margin-right: 40px;
         max-width: 80%;
         border-radius: 12px;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+
     }
 </style>
 

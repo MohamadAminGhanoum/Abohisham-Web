@@ -122,7 +122,7 @@ const number3Project = `
 
 <div id="number3Projects">Coming soon...</div>
 <script>
-    fetch('smart-room-screen-journal.md')
+    fetch('./smart-room-screen-journal.md')
     .then(response => response.text())
     .then(text => {
         document.getElementById('number3Projects').innerHTML = marked.parse(text);

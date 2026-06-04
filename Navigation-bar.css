@@ -39,6 +39,7 @@
         right: 0px;
         left: 0px;
         top: 0px;
+        z-index: 1000;
     }
     .page-name:hover {
         box-shadow: 0 7px 16px 0 rgba(186, 112, 112, 0.6);

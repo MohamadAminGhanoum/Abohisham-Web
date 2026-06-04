@@ -44,7 +44,7 @@
         width: 100%;
         text-align: center;
         font-family: 'verdana', sans-serif;
-        color: black;
+        color: rgb(143, 143, 143);
         font-weight: 900;
         font-family: 'verdana', sans-serif;
         margin-bottom: 30px;
@@ -56,6 +56,8 @@
         font-size: 1.2em;
         margin-bottom: 20px;
         max-width: 800px;
+                color: rgb(143, 143, 143);
+
     }
 </style>
 
@@ -123,6 +125,7 @@
         border-radius: 12px;
         width: 300px;
         min-height: 240px;
+        color: white;
     }
     .To-do-input {
         font-size: 16px;
@@ -138,9 +141,12 @@
         margin-left: 6px;
         border-radius: 12px;
         cursor: pointer;
+        transform: translateY(-4px);
+        transition-duration: 0.4s;
     }
     .addbutton:hover {
         background-color: rgb(100, 109, 125);
+        outline: solid 1px rgba(100, 157, 213, 0.9);
     }
 
     #list-style {

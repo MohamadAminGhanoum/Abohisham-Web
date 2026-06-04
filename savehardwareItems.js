@@ -80,9 +80,46 @@ window.onload = function() {
 </style>
 `;
 
+    const devboardName = "Custom dev-board";
+    const devboardProject = 
+    
+    `<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<div id="devboardProjects">Coming soon...</div>
+<script>
+    fetch('custom-devboard-journal.md')
+    .then(response => response.text())
+    .then(text => {
+        document.getElementById('devboardProjects').innerHTML = marked.parse(text);
+    })
+    .catch(error => {
+        console.error('smth is wrong with md file:', error);
+        document.getElementById('devboardProjects').innerHTML = 'Error detail: ' + error.message + '; issue with loading the contents.';
+    });
+
+</script>
+<style>
+    #devboardProjects {
+        margin-right: 20px;
+        border-radius: 12px;
+        width: 90%;
+        padding: 20px 10px;
+        font-family: 'verdana', sans-serif;
+        color: white;
+    }
+
+    #devboardProjects img {
+        max-width: 250px;
+        height: auto;
+        border-radius: 8px;
+    }
+</style>
+`;
+
     const wasHardwareDeleted = localStorage.getItem("welcomeHardwareDeleted");
 
     if (wasHardwareDeleted !="yes") {
+        addProjectToScreen(devboardName, devboardProject);
         addProjectToScreen(welcomeHardwareName, welcomeHardwareProject);
     }
     const savedProjects = JSON.parse(localStorage.getItem("hardwareitems")) || [];

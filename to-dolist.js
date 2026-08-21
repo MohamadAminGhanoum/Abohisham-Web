@@ -13,7 +13,7 @@ function ReadtodoItems() {
     todoData.forEach(element => {
         let li = document.createElement("li");
         let style = element.status ? "style='text-decoration: line-through'" : "";
-        const todoItems = `<div ${style} ondblclick="FinishTodo(this)">${element.item}</div><img class="delete to-do" src="delete.png" onclick="DeleteTodo(this)">`;
+        const todoItems = `<div ${style} ondblclick="FinishTodo(this)">${element.item}</div><img class="delete to-do" src="images/delete.png" onclick="DeleteTodo(this)">`;
         li.innerHTML = todoItems;
         liststyle.appendChild(li);
     });

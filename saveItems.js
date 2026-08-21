@@ -20,7 +20,7 @@ function saveItem(){
         };
 
 const deletebutton = document.createElement("img")
-deletebutton.src= "delete.png";
+deletebutton.src= "images/delete.png";
 deletebutton.className="deleteproject";
 deletebutton.onclick = function() {
     if (confirm(`Delete ${name}?`)){
